@@ -11,6 +11,7 @@
   ## 👀 About Me
   #### :raising_hand: I am a noob pwnabler.<br/>
   #### :fire: I want to participate in a CTF.<br/>
+  #### :white_flag: I started learning hacking 1 month ago
   <br/>
   <br/>
   
