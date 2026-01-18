@@ -41,7 +41,7 @@
   <br/>
   <br/>
   
-  ## 🤔 Github Stats
+  ### 🤔 Github Stats
   ## :sweat_smile: nothing
   
 </div>
