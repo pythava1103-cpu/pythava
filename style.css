@@ -1,95 +1,106 @@
-/* ===== 홈 섹션 스타일 ===== */
+/* 기본 배경 및 폰트 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', sans-serif;
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+/* 홈 섹션 */
 .home {
-    position: relative;
-    width: 100%;
-    height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: #111;
-    color: white;
+    padding-top: 100px;
 }
 
-/* 슬라이드 영역 */
+/* 슬라이더 컨테이너 */
 .slider {
     position: relative;
-    width: 80%;
-    max-width: 1000px;
-    height: 300px;
+    width: 90%;
+    max-width: 1100px;
+    height: 450px;
     overflow: hidden;
-    border-radius: 15px;
-    margin-bottom: 40px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 64, 129, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .slides {
     display: flex;
-    width: 500%;
+    width: 500%; /* 슬라이드 개수에 맞춰 조절 */
     height: 100%;
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
 .slide {
-    flex: 1 0 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 1 0 20%;
+    position: relative;
     background-size: cover;
     background-position: center;
-    position: relative;
     text-decoration: none;
     color: white;
 }
 
-/* 슬라이드 텍스트 */
+/* 슬라이드 내부 텍스트 레이어 */
 .slide-text {
-    background: rgba(0,0,0,0.4);
-    padding: 20px 30px;
-    border-radius: 12px;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 10%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 50px;
+    box-sizing: border-box;
 }
 
 .slide-text h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.8);
 }
 
 .slide-text p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+    opacity: 0.9;
 }
 
 .slide-text button {
-    padding: 10px 25px;
+    padding: 12px 30px;
     font-size: 1em;
+    font-weight: bold;
     border: none;
-    border-radius: 8px;
-    background: #ff4081;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff4081, #7c4dff);
     color: white;
     cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
+    transition: all 0.3s ease;
 }
 
 .slide-text button:hover {
-    background: #e73370;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.6);
 }
 
-/* 텍스트 애니메이션 */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* 홈 텍스트 영역 */
+/* 하단 텍스트 */
 .home h1 {
-    font-size: 3em;
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    margin-top: 50px;
+    background: linear-gradient(to right, #fff, #ff4081);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.home p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+
+hr {
+    width: 100px;
+    border: 1px solid #ff4081;
+    margin: 20px 0;
 }
