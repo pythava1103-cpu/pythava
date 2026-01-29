@@ -1,25 +1,24 @@
-const slidesContainer = document.querySelector('.slides');
+const slides = document.querySelector('.slides');
 const slideCount = document.querySelectorAll('.slide').length;
 let currentIndex = 0;
 
-function moveSlide() {
+function nextSlide() {
     currentIndex++;
     
-    // 마지막 슬라이드에 도달하면 첫 번째로 복귀
     if (currentIndex >= slideCount) {
-        currentIndex = 0;
+        currentIndex = 0; // 마지막이면 첫 번째로
     }
     
-    const translateValue = -(currentIndex * (100 / slideCount));
-    slidesContainer.style.transform = `translateX(${translateValue}%)`;
+    // 정확히 100% 단위로 이동하여 칸에 딱 맞게 멈춤
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-// 3초마다 자동 재생
-let slideInterval = setInterval(moveSlide, 3000);
+// 3초마다 "한 칸 이동 후 정지" 반복
+let timer = setInterval(nextSlide, 3000);
 
-// 마우스를 올리면 정지, 떼면 다시 재생 (사용자 편의)
-const slider = document.querySelector('.slider');
-slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
-slider.addEventListener('mouseleave', () => {
-    slideInterval = setInterval(moveSlide, 3000);
+// 마우스 올리면 멈추는 센스 (구경하기 편하게)
+const sliderContainer = document.querySelector('.slider');
+sliderContainer.addEventListener('mouseenter', () => clearInterval(timer));
+sliderContainer.addEventListener('mouseleave', () => {
+    timer = setInterval(nextSlide, 3000);
 });
