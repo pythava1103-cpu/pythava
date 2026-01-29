@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <link rel="icon" type="image/png" href="https://github.com/user-attachments/assets/017bf2c8-da02-49ef-bd2d-4bd933878bc9">
     <meta charset="UTF-8">
-    <title>Pythava - Access</title>
-    <link rel="stylesheet" href="../../upstyle.css"> <link rel="stylesheet" href="./sign_in.css"> </head>
-<body>
+    <title>Pythava - Sign In</title>
+    <link rel="stylesheet" href="/upstyle.css"> <link rel="stylesheet" href="./style.css">  </head>
 
-<div class="login-container">
+<body>
+<header class="header">
+    <h1 class="logo">
+        <a href="/index.html">Pythava</a>
+    </h1>
+    <nav class="nav">
+        <a href="../../center/wargame.html">wargame</a>
+        <a href="../../center/write.html">write</a>
+        <a href="../../center/chat.html">Chat</a>
+        <a href="../../center/contents.html">Contents</a>
+        <a href="../../center/log.html">Log</a>
+    </nav>
+    <div class="auth">
+        <span id="guest"><a href="/account/sign_in/sign_in.html">sign in</a> | <a href="/account/sign_out/sign_out.html">sign out</a></span>
+        <span id="user" style="display:none;">Hello, <span id="usernameDisplay"></span> | <a href="/account/home">sign out</a></span>
+    </div>
+</header>
+
+<section class="login-screen">
     <div class="login-box">
-        <div class="glitch-wrapper">
-            <h1 class="glitch" data-text="SYSTEM ACCESS">SYSTEM ACCESS</h1>
-        </div>
-        <p class="subtitle">Enter your credentials to connect</p>
+        <div class="system-label">SYSTEM ACCESS v1.0</div>
+        <h2 class="glitch-text">AUTHENTICATION</h2>
         
         <form id="loginForm">
-            <div class="input-group">
-                <input type="text" id="userId" required placeholder=" ">
-                <label>USERNAME</label>
-                <div class="bar"></div>
+            <div class="input-field">
+                <input type="text" id="userId" required>
+                <label>IDENTIFIER</label>
             </div>
-            
-            <div class="input-group">
-                <input type="password" id="userPw" required placeholder=" ">
-                <label>PASSWORD</label>
-                <div class="bar"></div>
+            <div class="input-field">
+                <input type="password" id="userPw" required>
+                <label>ACCESS_CODE</label>
             </div>
-
-            <button type="submit" class="login-btn">INITIALIZE LOGIN</button>
+            <button type="submit" class="access-btn">CONNECT</button>
         </form>
         
-        <div class="login-footer">
-            <a href="#">Forgot password?</a>
-            <a href="#">Create account</a>
+        <div class="box-footer">
+            <span>SECURE CONNECTION ESTABLISHED</span>
         </div>
     </div>
-</div>
+</section>
 
-<script src="./sign_in.js"></script>
+<script src="/session.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
