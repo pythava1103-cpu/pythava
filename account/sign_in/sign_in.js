@@ -8,7 +8,7 @@ loginForm.addEventListener("submit", async function(e) {
     const password = document.getElementById("password").value.trim();
 
     try {
-        const response = await fetch("users.json");
+        const response = await fetch("/users.json");
         const users = await response.json();
 
         const user = users.find(u => u.username === username && u.password === password);
