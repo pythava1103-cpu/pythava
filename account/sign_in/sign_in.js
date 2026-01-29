@@ -8,6 +8,12 @@ const users = [
     { username: "test", password: "test123" }
 ];
 
+const username = localStroage.getItem("username");
+
+if(username){
+    window.location.href = "/account/home";
+
+
 loginForm.addEventListener("submit", function(e){
     e.preventDefault(); // 폼 기본 제출 막기
 
