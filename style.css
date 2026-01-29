@@ -3,14 +3,13 @@
     position: relative;
     width: 100%;
     height: 80vh;
-    overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    color: white;
-    background: #111;
     text-align: center;
+    background: #111;
+    color: white;
 }
 
 /* 슬라이드 영역 */
@@ -22,14 +21,14 @@
     overflow: hidden;
     border-radius: 15px;
     margin-bottom: 40px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
 }
 
 .slides {
     display: flex;
     width: 500%;
     height: 100%;
-    transition: all 0.5s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 }
 
 .slide {
@@ -37,43 +36,55 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2em;
-    font-weight: bold;
     background-size: cover;
     background-position: center;
-}
-
-.slide1 { background: #ff6b6b; }
-.slide2 { background: #6bffb3; }
-.slide3 { background: #6b8cff; }
-.slide4 { background: #ffb36b; }
-.slide5 { background: #b36bff; }
-
-/* 메뉴 버튼 */
-.menu-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.menu-buttons a {
-    padding: 12px 25px;
-    background: #fff;
-    color: #111;
-    border-radius: 8px;
-    font-weight: bold;
+    position: relative;
     text-decoration: none;
+    color: white;
+}
+
+/* 슬라이드 텍스트 */
+.slide-text {
+    background: rgba(0,0,0,0.4);
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.slide-text p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.slide-text button {
+    padding: 10px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background: #ff4081;
+    color: white;
+    cursor: pointer;
     transition: transform 0.3s, background 0.3s;
 }
 
-.menu-buttons a:hover {
-    background: #ff4081;
-    color: white;
-    transform: scale(1.1);
+.slide-text button:hover {
+    background: #e73370;
+    transform: scale(1.05);
 }
 
-/* 텍스트 영역 */
+/* 텍스트 애니메이션 */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 홈 텍스트 영역 */
 .home h1 {
     font-size: 3em;
     margin-bottom: 15px;
