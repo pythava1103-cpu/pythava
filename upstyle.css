@@ -1,3 +1,4 @@
+/* 상단 전체 */
 .header {
     height: 60px;
     background-color: #222;
@@ -5,8 +6,9 @@
 
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* 자동 공간분배 대신 왼쪽 정렬 */
+    justify-content: space-between; /* 로고 왼쪽, auth 오른쪽 */
     padding: 0 30px;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -14,36 +16,53 @@
     z-index: 1000;
 }
 
-.logo {
+/* 로고 */
+.logo a {
+    color: white; /* 기본 색상 */
+    text-decoration: none;
     font-size: 20px;
-    margin-right: 50px; /* 메뉴와 로고 사이 고정 간격 */
-    white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.3s; /* 색상 부드럽게 변경 */
 }
 
+.logo a:hover {
+    color: #ffcc00; /* 마우스 올렸을 때 색상 */
+}
+
+/* nav 메뉴 - 가운데 정렬 */
 .nav {
     display: flex;
-    flex-grow: 1; /* 가능한 공간 확보 */
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center; /* 메뉴를 가운데 정렬 */
 }
 
 .nav a {
     color: white;
     text-decoration: none;
-    margin-right: 20px; /* 메뉴 간 간격 고정 */
-    white-space: nowrap; /* 글자가 길어져도 줄 바꿈 안됨 */
+    white-space: nowrap;
+    transition: color 0.3s;
 }
 
+.nav a:hover {
+    color: aqua;
+}
+
+/* 로그인 / 회원 auth - 오른쪽 정렬 */
 .auth {
     display: flex;
-    gap: 10px; /* 로그인/로그아웃 사이 간격 고정 */
+    gap: 10px;
     white-space: nowrap;
 }
 
 .auth a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .auth a:hover {
     color: #ffcc00;
-    text-decoration: underline;
 }
