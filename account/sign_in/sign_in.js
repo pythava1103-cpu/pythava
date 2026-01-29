@@ -10,8 +10,6 @@ const users = [
 
 const username = localStroage.getItem("username");
 
-if(username){
-    window.location.href = "/account/home";
 
 
 loginForm.addEventListener("submit", function(e){
