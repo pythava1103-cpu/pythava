@@ -3,14 +3,15 @@
 <head>
     <link rel="icon" type="image/png" href="https://github.com/user-attachments/assets/017bf2c8-da02-49ef-bd2d-4bd933878bc9">
     <meta charset="UTF-8">
-    <title>404 - PATH NOT FOUND</title>
-    <link rel="stylesheet" href="/upstyle.css">
-    <link rel="stylesheet" href="./404.css">
-</head>
-<body>
+    <title>Pythava - 404 Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/upstyle.css"> <link rel="stylesheet" href="./404.css">    </head>
 
+<body>
 <header class="header">
-    <h1 class="logo"><a href="/index.html">Pythava</a></h1>
+    <h1 class="logo">
+        <a href="/index.html">Pythava</a>
+    </h1>
     <nav class="nav">
         <a href="/center/wargame.html">wargame</a>
         <a href="/center/write.html">community</a>
@@ -18,22 +19,30 @@
         <a href="/center/log.html">Log</a>
     </nav>
     <div class="auth">
-        <span id="guest"><a href="/account/sign_in/sign_in.html">sign in</a></span>
+        <span id="guest"><a href="/account/sign_in/sign_in.html">sign in</a> | <a href="/account/sign_out/sign_out.html">sign out</a></span>
+        <span id="user" style="display:none;">Hello, <span id="usernameDisplay"></span> | <a href="/account/home">sign out</a></span>
     </div>
 </header>
 
-<div class="error-container">
-    <div class="error-box">
-        <h1 class="error-code">404</h1>
-        <div class="error-msg">
-            <p class="status-line">> [ERROR] SPECIFIED PATH NOT FOUND</p>
-            <p class="status-line">> [STATUS] ACCESS_DENIED</p>
-            <p class="status-line">> [LOG] UNKNOWN_REQUEST_ORIGIN</p>
+<section class="error-wrapper">
+    <div class="terminal-card">
+        <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="title">ERROR_LOG_REPORT</span>
         </div>
-        <div class="glitch-line">시스템의 정의되지 않은 구역에 진입했습니다.</div>
-        <a href="/index.html" class="back-home">RETURN TO CORE_SYSTEM</a>
+        <div class="terminal-body">
+            <h1 class="glitch" data-text="404">404</h1>
+            <div class="code-area">
+                <p class="line"><span class="prompt">></span> [ERROR] SPECIFIED PATH NOT FOUND</p>
+                <p class="line"><span class="prompt">></span> [STATUS] ACCESS_DENIED</p>
+                <p class="line"><span class="prompt">></span> [INFO] 시스템의 정의되지 않은 구역입니다.</p>
+            </div>
+            <a href="/index.html" class="btn-repair">RETURN TO CORE_SYSTEM</a>
+        </div>
     </div>
-</div>
+</section>
 
 <script src="/session.js"></script>
 </body>
