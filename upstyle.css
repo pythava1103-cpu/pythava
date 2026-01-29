@@ -9,6 +9,8 @@
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
+    /* [수정 1] 패딩이 너비에 포함되도록 설정 (오른쪽 삐져나감 방지) */
+    box-sizing: border-box; 
 }
 
 /* 로고 - 왼쪽 */
@@ -26,12 +28,15 @@
 
 /* nav 메뉴 - 정확히 중앙 */
 .nav {
-    position: absolute;      /* 절대 위치로 중앙 고정 */
-    left: 50%;               /* 화면 왼쪽에서 50% 이동 */
-    transform: translateX(-50%); /* 가운데 정렬 */
+    position: absolute;      
+    left: 50%;               
+    transform: translateX(-50%); 
     display: flex;
     gap: 20px;
+    /* [수정 2] 화면이 좁아질 때 auth와 겹치지 않게 우선순위 조정 */
+    z-index: 1; 
 }
+
 .nav a {
     color: white;
     text-decoration: none;
@@ -44,10 +49,15 @@
 
 /* 로그인(auth) - 오른쪽 고정 */
 .auth {
-    margin-left: auto; /* 오른쪽으로 밀기 */
+    margin-left: auto; 
     display: flex;
     gap: 10px;
+    /* [수정 3] 텍스트가 줄바꿈되어 겹쳐 보이지 않게 고정 */
+    white-space: nowrap; 
+    position: relative;
+    z-index: 2;
 }
+
 .auth a {
     color: white;
     text-decoration: none;
@@ -60,7 +70,7 @@
 /* body 여백 */
 body {
     margin: 0;
-    padding-top: 60px; /* 헤더 높이만큼 */
+    padding-top: 60px; 
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
