@@ -37,7 +37,7 @@ body {
 }
 
 /* 로고 링크 스타일 */
-.header .logo a {
+.logo a {
     color: white;            /* 글자 색 */
     text-decoration: none;   /* 밑줄 제거 */
     cursor: pointer;         /* 마우스 포인터 표시 */
@@ -46,7 +46,7 @@ body {
     font-weight: bold;
 }
 
-.header .logo a:hover {
+.logo a:hover {
     color: #ffcc00;          /* 호버 시 색상 */
     text-decoration: underline; /* 밑줄 표시 */
 }
