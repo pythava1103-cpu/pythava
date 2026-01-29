@@ -1,106 +1,65 @@
-/* 기본 배경 및 폰트 */
+/* 전체 배경: 딥 다크 + 그리드 패턴 */
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Pretendard', sans-serif;
-    background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
-    color: #e0e0e0;
-    overflow-x: hidden;
+    background-color: #0a0a0c;
+    background-image: 
+        linear-gradient(rgba(18, 16, 16, 0.8) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(18, 16, 16, 0.8) 2px, transparent 2px);
+    background-size: 50px 50px; /* 모눈종이 느낌 */
+    color: #00ff41; /* 해커 터미널 그린 */
+    font-family: 'Consolas', monospace;
 }
 
-/* 홈 섹션 */
-.home {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
-}
-
-/* 슬라이더 컨테이너 */
+/* 슬라이더 외곽: 네온 효과 */
 .slider {
     position: relative;
-    width: 90%;
-    max-width: 1100px;
-    height: 450px;
+    width: 85%;
+    max-width: 1000px;
+    height: 350px;
+    margin: 50px auto;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 64, 129, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 2px solid #333;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2); /* 은은한 녹색 광 */
 }
 
 .slides {
     display: flex;
-    width: 500%; /* 슬라이드 개수에 맞춰 조절 */
+    width: 100%; /* JS에서 100%씩 밀어주기 위해 기본값 설정 */
     height: 100%;
-    transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* 부드럽게 툭! 멈추는 효과 */
 }
 
 .slide {
-    flex: 1 0 20%;
-    position: relative;
+    flex: 0 0 100%; /* 한 슬라이드가 부모 너비의 100% 차지 */
+    height: 100%;
     background-size: cover;
     background-position: center;
-    text-decoration: none;
-    color: white;
+    position: relative;
 }
 
-/* 슬라이드 내부 텍스트 레이어 */
+/* 슬라이드 내부 텍스트 박스: 글래스모피즘 */
 .slide-text {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 10%, transparent 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 50px;
-    box-sizing: border-box;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px); /* 뒤쪽 흐리게 */
+    padding: 20px;
+    border-left: 5px solid #ff4081; /* 포인트 컬러 */
+    border-radius: 0 10px 10px 0;
 }
 
-.slide-text h2 {
-    font-size: 3em;
-    margin: 0;
-    text-shadow: 0 0 10px rgba(255, 64, 129, 0.8);
-}
+.slide-text h2 { margin: 0; color: #fff; font-size: 1.8rem; }
+.slide-text p { margin: 10px 0; color: #ccc; }
 
-.slide-text p {
-    font-size: 1.2em;
-    margin: 10px 0 20px;
-    opacity: 0.9;
-}
-
-.slide-text button {
-    padding: 12px 30px;
-    font-size: 1em;
-    font-weight: bold;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(45deg, #ff4081, #7c4dff);
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.slide-text button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 64, 129, 0.6);
-}
-
-/* 하단 텍스트 */
+/* 하단 텍스트 영역 */
 .home h1 {
-    font-size: 2.5em;
-    margin-top: 50px;
-    background: linear-gradient(to right, #fff, #ff4081);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-hr {
-    width: 100px;
-    border: 1px solid #ff4081;
-    margin: 20px 0;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #fff;
+    text-shadow: 0 0 10px #ff4081;
 }
