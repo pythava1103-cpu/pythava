@@ -36,6 +36,21 @@ body {
     font-size: 20px;
 }
 
+/* 로고 링크 스타일 */
+.header .logo a {
+    color: white;            /* 글자 색 */
+    text-decoration: none;   /* 밑줄 제거 */
+    cursor: pointer;         /* 마우스 포인터 표시 */
+    display: inline-block;   /* 클릭 범위 확보 */
+    font-size: 20px;         /* 글자 크기 */
+    font-weight: bold;
+}
+
+.header .logo a:hover {
+    color: #ffcc00;          /* 호버 시 색상 */
+    text-decoration: underline; /* 밑줄 표시 */
+}
+
 .nav a {
     color: white;
     text-decoration: none;
