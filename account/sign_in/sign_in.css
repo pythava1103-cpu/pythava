@@ -1,12 +1,13 @@
-/* 로그인 페이지 전체 스타일 */
+/* 로그인 페이지 body 스타일 */
 body.login-page {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* 헤더 + 로그인 폼 세로 배치 */
     align-items: center;
-    height: 100vh;
-    background-color: #f0f2f5;
     margin: 0;
+    padding-top: 60px; /* 헤더 높이만큼 공간 확보 */
+    background-color: #f0f2f5;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
 }
 
 /* 로그인 박스 */
@@ -16,6 +17,7 @@ body.login-page {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     width: 300px;
+    margin-top: 50px; /* 헤더 밑으로 여백 */
 }
 
 /* 제목 */
@@ -60,4 +62,14 @@ body.login-page {
 .error-message {
     color: red;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 계정 없을 때 안내 링크 */
+.login-container p a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+.login-container p a:hover {
+    text-decoration: underline;
 }
