@@ -3,38 +3,38 @@
 <head>
     <link rel="icon" type="image/png" href="https://github.com/user-attachments/assets/017bf2c8-da02-49ef-bd2d-4bd933878bc9">
     <meta charset="UTF-8">
-    <title>pythava.kr</title>
+    <title>404 - PATH NOT FOUND</title>
     <link rel="stylesheet" href="/upstyle.css">
+    <link rel="stylesheet" href="./404.css">
 </head>
-
 <body>
-    <header class="header">
-        <h1 class="logo">
-            <a href="/index.html">Pythava</a>
-        </h1>
 
-        <nav class="nav">
-            <a href="center/wargame.html">wargame</a>
-            <a href="center/write.html">write</a>
-            <a href="center/chat.html">Chat</a>
-            <a href="center/contents.html">Contents</a>
-            <a href="center/log.html">Log</a>
-        </nav>
+<header class="header">
+    <h1 class="logo"><a href="/index.html">Pythava</a></h1>
+    <nav class="nav">
+        <a href="/center/wargame.html">wargame</a>
+        <a href="/center/write.html">community</a>
+        <a href="/center/chat.html">Chat</a>
+        <a href="/center/log.html">Log</a>
+    </nav>
+    <div class="auth">
+        <span id="guest"><a href="/account/sign_in/sign_in.html">sign in</a></span>
+    </div>
+</header>
 
-        <div class="auth">
-            <span id="guest"><a href="account/sign_in/sign_in.html">sign in</a> | <a href="/account/sign_out/sign_out.html">sign out</a></span>
-
-            <span id="user" style="display:none;">Hello, <span id="usernameDisplay"></span> | <a href="/acount/home">sign out</a></span>
+<div class="error-container">
+    <div class="error-box">
+        <h1 class="error-code">404</h1>
+        <div class="error-msg">
+            <p class="status-line">> [ERROR] SPECIFIED PATH NOT FOUND</p>
+            <p class="status-line">> [STATUS] ACCESS_DENIED</p>
+            <p class="status-line">> [LOG] UNKNOWN_REQUEST_ORIGIN</p>
         </div>
+        <div class="glitch-line">시스템의 정의되지 않은 구역에 진입했습니다.</div>
+        <a href="/index.html" class="back-home">RETURN TO CORE_SYSTEM</a>
+    </div>
+</div>
 
-    </header>
-
-
-    <section class="home">
-      <h1>404</h1>
-      <h1>NOT FOUND</h1>
-    </section>
-    <!-- HTML body 끝 부분에 넣기 (권장) -->
-    <script src="/session.js"></script>
+<script src="/session.js"></script>
 </body>
 </html>
