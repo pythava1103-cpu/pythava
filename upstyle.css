@@ -22,7 +22,7 @@
 
 .nav {
     display: flex;
-    flex-grow: 1; /* 가능한 공간 확보 */
+    /*flex-grow: 1; /* 가능한 공간 확보 */
 }
 
 .nav a {
